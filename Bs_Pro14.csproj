@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{328494A2-E19D-45D2-BDF6-5086E546BF58}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bs_Pro14</RootNamespace>
+    <AssemblyName>Bs_Pro14</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Department.cs" />
+    <Compile Include="Classes\RegStudent.cs" />
+    <Compile Include="Classes\Semester.cs" />
+    <Compile Include="Classes\Course.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcceptClassRoomRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcceptClassRoomRequest.Designer.cs">
+      <DependentUpon>frmAcceptClassRoomRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddConstraint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddConstraint.Designer.cs">
+      <DependentUpon>frmAddConstraint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCourse.Designer.cs">
+      <DependentUpon>frmAddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddLesson.Designer.cs">
+      <DependentUpon>frmAddLesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAssignedClassRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAssignedClassRooms.Designer.cs">
+      <DependentUpon>frmAssignedClassRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ClassRequest.cs" />
+    <Compile Include="Classes\ClassRoom.cs" />
+    <Compile Include="Classes\Constraints.cs" />
+    <Compile Include="Classes\CourseBySyllabus.cs" />
+    <Compile Include="Classes\Lesson.cs" />
+    <Compile Include="Classes\LessonInSemester.cs" />
+    <Compile Include="errorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="errorsForm.Designer.cs">
+      <DependentUpon>errorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Person.cs" />
+    <Compile Include="frmB\autoSchStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\autoSchStudent.designer.cs">
+      <DependentUpon>autoSchStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\Class\CourseS.cs" />
+    <Compile Include="frmB\Class\LecturerS.cs" />
+    <Compile Include="frmB\Class\LessonS.cs" />
+    <Compile Include="frmB\Class\MaintenanceS.cs" />
+    <Compile Include="frmB\Class\PersonS.cs" />
+    <Compile Include="frmB\Class\ScheduleC.cs" />
+    <Compile Include="frmB\Class\SecretaryS.cs" />
+    <Compile Include="frmB\Class\StudentS.cs" />
+    <Compile Include="frmB\CourseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\CourseInfo.designer.cs">
+      <DependentUpon>CourseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\CoursesInLabs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\CoursesInLabs.designer.cs">
+      <DependentUpon>CoursesInLabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\DailySchdule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\DailySchdule.designer.cs">
+      <DependentUpon>DailySchdule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\LecInLabs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\LecInLabs.designer.cs">
+      <DependentUpon>LecInLabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\LecViewCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\LecViewCourses.designer.cs">
+      <DependentUpon>LecViewCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\LecViewSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\LecViewSchedule.designer.cs">
+      <DependentUpon>LecViewSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\LecViewStud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\LecViewStud.designer.cs">
+      <DependentUpon>LecViewStud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\MeSchBuild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\MeSchBuild.designer.cs">
+      <DependentUpon>MeSchBuild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\NumOfStudInCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\NumOfStudInCourse.designer.cs">
+      <DependentUpon>NumOfStudInCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\PostponementCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\PostponementCourse.designer.cs">
+      <DependentUpon>PostponementCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\RankingofLecturers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\RankingofLecturers.designer.cs">
+      <DependentUpon>RankingofLecturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\RegFullCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\RegFullCourse.designer.cs">
+      <DependentUpon>RegFullCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\Schedule.designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\ScheduleBuild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\ScheduleBuild.designer.cs">
+      <DependentUpon>ScheduleBuild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\scheduleChangeStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\scheduleChangeStudent.designer.cs">
+      <DependentUpon>scheduleChangeStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\SecViewCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\SecViewCourses.designer.cs">
+      <DependentUpon>SecViewCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\SecViewStudCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\SecViewStudCourses.designer.cs">
+      <DependentUpon>SecViewStudCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\StuViewCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\StuViewCourses.designer.cs">
+      <DependentUpon>StuViewCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB\TrialCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB\TrialCourse.designer.cs">
+      <DependentUpon>TrialCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFacebookLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFacebookLogin.Designer.cs">
+      <DependentUpon>frmFacebookLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageConstants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageConstants.Designer.cs">
+      <DependentUpon>frmManageConstants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectSemester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectSemester.Designer.cs">
+      <DependentUpon>frmSelectSemester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowClassRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowClassRequest.Designer.cs">
+      <DependentUpon>frmShowClassRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddClassRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddClassRoom.Designer.cs">
+      <DependentUpon>frmAddClassRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPerson.Designer.cs">
+      <DependentUpon>frmAddPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateClassRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateClassRequest.Designer.cs">
+      <DependentUpon>frmCreateClassRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowConstriant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowConstriant.Designer.cs">
+      <DependentUpon>frmShowConstriant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowCourses.Designer.cs">
+      <DependentUpon>frmShowCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowFailStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowFailStudent.Designer.cs">
+      <DependentUpon>frmShowFailStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowLessonsByCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowLessonsByCourse.Designer.cs">
+      <DependentUpon>frmShowLessonsByCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowLessonSemester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowLessonSemester.Designer.cs">
+      <DependentUpon>frmShowLessonSemester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowPersons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowPersons.Designer.cs">
+      <DependentUpon>frmShowPersons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowStudant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowStudant.Designer.cs">
+      <DependentUpon>frmShowStudant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\DatabaseManager.cs" />
+    <Compile Include="frmShowClassRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowClassRooms.Designer.cs">
+      <DependentUpon>frmShowClassRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Item.cs" />
+    <Compile Include="Utilities\SQLQuery.cs" />
+    <Compile Include="Utilities\Time.cs" />
+    <Compile Include="Utilities\Validations.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcceptClassRoomRequest.resx">
+      <DependentUpon>frmAcceptClassRoomRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddConstraint.resx">
+      <DependentUpon>frmAddConstraint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCourse.resx">
+      <DependentUpon>frmAddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddLesson.resx">
+      <DependentUpon>frmAddLesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAssignedClassRooms.resx">
+      <DependentUpon>frmAssignedClassRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="errorsForm.resx">
+      <DependentUpon>errorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddClassRoom.resx">
+      <DependentUpon>frmAddClassRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddPerson.resx">
+      <DependentUpon>frmAddPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\autoSchStudent.resx">
+      <DependentUpon>autoSchStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\CourseInfo.resx">
+      <DependentUpon>CourseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\CoursesInLabs.resx">
+      <DependentUpon>CoursesInLabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\DailySchdule.resx">
+      <DependentUpon>DailySchdule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\LecInLabs.resx">
+      <DependentUpon>LecInLabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\LecViewCourses.resx">
+      <DependentUpon>LecViewCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\LecViewSchedule.resx">
+      <DependentUpon>LecViewSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\LecViewStud.resx">
+      <DependentUpon>LecViewStud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\MeSchBuild.resx">
+      <DependentUpon>MeSchBuild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\NumOfStudInCourse.resx">
+      <DependentUpon>NumOfStudInCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\PostponementCourse.resx">
+      <DependentUpon>PostponementCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\RankingofLecturers.resx">
+      <DependentUpon>RankingofLecturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\RegFullCourse.resx">
+      <DependentUpon>RegFullCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\ScheduleBuild.resx">
+      <DependentUpon>ScheduleBuild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\scheduleChangeStudent.resx">
+      <DependentUpon>scheduleChangeStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\SecViewCourses.resx">
+      <DependentUpon>SecViewCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\SecViewStudCourses.resx">
+      <DependentUpon>SecViewStudCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\StuViewCourses.resx">
+      <DependentUpon>StuViewCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB\TrialCourse.resx">
+      <DependentUpon>TrialCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateClassRequest.resx">
+      <DependentUpon>frmCreateClassRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFacebookLogin.resx">
+      <DependentUpon>frmFacebookLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageConstants.resx">
+      <DependentUpon>frmManageConstants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectSemester.resx">
+      <DependentUpon>frmSelectSemester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowClassRequest.resx">
+      <DependentUpon>frmShowClassRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowConstriant.resx">
+      <DependentUpon>frmShowConstriant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowCourses.resx">
+      <DependentUpon>frmShowCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowFailStudent.resx">
+      <DependentUpon>frmShowFailStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowLessonsByCourse.resx">
+      <DependentUpon>frmShowLessonsByCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowLessonSemester.resx">
+      <DependentUpon>frmShowLessonSemester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowPersons.resx">
+      <DependentUpon>frmShowPersons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowStudant.resx">
+      <DependentUpon>frmShowStudant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmShowClassRooms.resx">
+      <DependentUpon>frmShowClassRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
